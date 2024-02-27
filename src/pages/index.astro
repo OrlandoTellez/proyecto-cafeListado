@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from "../secciones/Hero.astro"
+import Presentacion from "../secciones/Presentacion.astro"
+---
+
+<Layout title="Cafe Listado">
+	<main>
+		<Hero>
+			<Presentacion/>
+		</Hero>
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+</style>

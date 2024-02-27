@@ -1,0 +1,72 @@
+---
+import { Tarjetas } from "../components/Tarjetas"
+---
+
+<section>
+    <div class="container">
+        <div class="section">
+            <h1>Our Collection</h1>
+            <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
+            <div class="botones">
+                <a class="boton" href="#">All Products</a>
+                <a class="boton" href="#">Available Now</a>
+            </div>
+        </div>
+        <div class="section-productos">
+            <Tarjetas/>
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        width: 90%;
+        height: 100vh;
+        background-color: var(--color-secundario);
+        position: absolute;
+        top: 0;
+        border-radius: 20px;  
+        margin-top: 140px; 
+    }
+
+    .container{
+        padding: 10px;
+    }
+
+    .section{
+        color: var(--color-texto);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section h1{
+        font-size: 2rem;
+    }
+
+    .section p{
+        font-size: 1rem;
+        color: var(--color-botones);
+    }
+
+    .botones{
+        display: flex;
+        gap: 20px;
+    }
+
+    .botones a{
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 10px;
+        color: var(--color-texto);
+        cursor: pointer;
+    }
+
+</style>
+
+<script>
+    
+</script>

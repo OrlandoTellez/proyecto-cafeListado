@@ -1,5 +1,5 @@
 ---
-import { Tarjetas } from "../components/Tarjetas"
+import {Tarjetas} from "../components/Tarjetas"
 ---
 
 <section>
@@ -13,7 +13,7 @@ import { Tarjetas } from "../components/Tarjetas"
             </div>
         </div>
         <div class="section-productos">
-            <Tarjetas/>
+            <Tarjetas client:only/>
         </div>
     </div>
 </section>
@@ -21,7 +21,6 @@ import { Tarjetas } from "../components/Tarjetas"
 <style>
     section{
         width: 90%;
-        height: 100vh;
         background-color: var(--color-secundario);
         position: absolute;
         top: 0;
@@ -63,6 +62,12 @@ import { Tarjetas } from "../components/Tarjetas"
         border-radius: 10px;
         color: var(--color-texto);
         cursor: pointer;
+    }
+
+    .section-productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 </style>

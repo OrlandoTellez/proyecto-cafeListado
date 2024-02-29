@@ -1,4 +1,43 @@
-.container-tarjeta__contenido{
+.container{
+    max-width: 100%;
     display: flex;
-    
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-card{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-card figure img{
+    border-radius: 15px;
+}
+
+.container-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-text p{
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+.container-text span{
+    background-color: var(--color-precio);
+    border-radius: 5px;
+    padding-inline: 10px;
+    font-weight: bold;
+}
+
+.container-rating{
+    display: flex;
+    color: var(--color-texto);
+}
+
+.vote{
+    color: var(--color-botones);
 }

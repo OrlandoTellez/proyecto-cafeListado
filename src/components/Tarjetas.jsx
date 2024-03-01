@@ -20,7 +20,7 @@ export const Tarjetas = () => {
                 <p>${item.rating} <span className="vote">({item.votes} votes)</span> </p>
               </div>
             </div>
-          ))}
+          ))} 
         </div>
     </>
   )

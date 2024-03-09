@@ -1,8 +1,11 @@
 import { useFetch } from "./useFetch"
 import "./Tarjetas.css"
+import { useState } from "react";
+
 
 export const Tarjetas = () => {
-  const {data} = useFetch("https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json")
+  const {data} = useFetch("https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json");
+  
 
   return (
     <>
@@ -17,7 +20,7 @@ export const Tarjetas = () => {
                 <span>{item.price}</span>
               </div>
               <div className="container-rating">
-                <p>${item.rating} <span className="vote">({item.votes} votes)</span> </p>
+                <p>${item.rating} <span className="vote">({item.votes} votes)</span></p>
               </div>
             </div>
           ))} 

@@ -1,9 +1,25 @@
 import { useFetch } from "./useFetch"
+import { useState, useEffect } from "react";
 import "./Tarjetas.css"
-
 
 export const Tarjetas = () => {
   const {data, loading} = useFetch("https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json");
+  const [filteredData, setFilteredData] = useState([]);
+  const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    setFilteredData(data);
+  }, [data]);
+
+  const handleFilter = (filterValue) => {
+    setFilter(filterValue);
+    if (filterValue === 'available') {
+      const availableProducts = data.filter((product) => product.available);
+      setFilteredData(availableProducts);
+    } else if (filterValue === 'all') {
+      setFilteredData(data);
+    }
+  };
 
   if(loading){
     return <span>Cargando...</span>
@@ -11,22 +27,22 @@ export const Tarjetas = () => {
   return (
     <>
         <div className="container-every">
-          <div class="botones">
-              <button class="boton"> 
-                All Products
-              </button>
-              <button class="boton">
-                Available Now
-              </button>
+          <div  className="container-filters">
+            <button value="all" onClick={() => handleFilter("all")}>
+              All Products
+            </button>
+            <button className="avalaible" value="available" onClick={() => handleFilter("available")}>
+              Avalaible Now
+            </button>
+            
           </div>
-
           <div className="container">
-            {data?.map((item) => (
+            {filteredData?.map((item) => (
               <div key={item.id} className="container-card">
                 <figure>
                   <img src={item.image} alt={item.name} />
                   {
-                    item.popular === true ? (
+                item.popular === true ? (
                       <span className="popular">Popular</span>
                     ) : null
                   }

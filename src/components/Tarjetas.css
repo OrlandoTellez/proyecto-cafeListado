@@ -82,5 +82,26 @@
     background-color: var(--color-secundario);
     color: var(--color-texto);
     border: none;
-    font-size: 1.0em;
+    font-size: 1.0;
+}
+
+.container-filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container-filters button{
+    background-color: var(--color-botones);
+    color: white;
+    font-size: 1.0rem;
+    padding: 8px 9px;
+    border: none;
+    border-radius: 10px;
+}
+
+.container-filters .avalaible{
+    background-color: var(--color-secundario);
 }

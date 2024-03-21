@@ -6,9 +6,11 @@ import {Tarjetas} from "../components/Tarjetas"
     <div class="container-section">
         <div class="section">
             <h1>Our Collection</h1>
-            <p>
-              Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
-            </p>
+            <article>
+                <p>
+                Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
+                </p>
+            </article>
         </div>
         <div class="section-productos">
             <Tarjetas client:only/>
@@ -44,6 +46,11 @@ import {Tarjetas} from "../components/Tarjetas"
         align-items: center;
         text-align: center;
         gap: 20px;
+        width: 100%;
+    }
+
+    .section article{
+        width: 75%;
     }
 
     .section h1{
@@ -51,9 +58,9 @@ import {Tarjetas} from "../components/Tarjetas"
     }
 
     .section p{
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: var(--color-botones);
-        width: 500px;
+        
     }
 
     .botones{
